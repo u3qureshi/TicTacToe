@@ -1,0 +1,87 @@
+html {
+    background: url(./bi.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    background-color: transparent;
+}
+
+#container {
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+}
+
+#container h1 {
+    font-size: 80px;
+    margin-top: 10px;
+}
+
+.cell {
+    width: 90px;
+    height: 90px;
+    border: 5px solid orange;
+    border-radius: 10%;
+    background-color: rgba(255, 166, 0, 0.336);
+    box-shadow: 0 0 0 2px rgba(255, 190, 70);
+    line-height: 90px;
+    font-size: 70px;
+    cursor: pointer;
+    text-align: center;
+    text-shadow: 5px;
+}
+
+#game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 300px;
+    margin: auto;
+    gap: 30px;
+}
+
+.button {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: xx-large;
+    width: 200px;
+    height: 100px;
+    transition: ease-out 0.4s;
+    border: 5px solid yellow;
+    background-color: rgba(255, 166, 0, 0.336);
+    position: relative;
+    z-index: 1;
+    margin: 30px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button::before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    right: 50%;
+    bottom: 0%;
+    opacity: 0;
+    content: '';
+    background-color: rgba(255, 153, 0, 0.8);
+}
+
+.button:hover::before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+#update-text {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+}
